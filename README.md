@@ -68,3 +68,26 @@ job1 Congiguration
 
 Creating Job2
 By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code  and start training( eg. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the cnn processing).
+
+onfigure Email notification in jenkins :
+
+Click the ‘Manage Jenkins’ menu option displayed at the right side of the screen. You will be redirected to the ‘Manage Jenkins’ page, where you need to select the ‘Manage Plugin’ option.
+Click the ‘Available’ tab present at the top of the ‘Manage Plugin’ page.
+Start typing ‘Notification’ in the ‘Filter’ field displayed at the top-right side of the ‘Manage Plugin’ page. Click the checkbox next to the ‘Email-ext plugin’ option. Click the ‘Install without restart’ button.
+Now, click the checkbox next to the ‘Email-ext Template Plugin’ option. Click the ‘Install without restart’ button.
+Go to the Jenkins home page and click the ‘Manage Jenkins’ menu option. Then, select the ‘Configure System’ option.
+Enter the SMTP server name under ‘Email Notification’. Click the ‘Advanced’ button and then click the checkbox next to the ‘Use SMTP Authentication’ option. Now, set the following fields.
+
+SMTP server name : smtp.gmail.com
+User name: user_email_id@gmail.com
+Password: abcd
+Use SSL : Checked
+SMTP Port: 456
+
+
+Creating Job3 in jenkins
+
+
+
+Add another job in Jenkins and name it.
+Go to build triggers and click on 'Build after other projects are built' and give the name of your previous job.
