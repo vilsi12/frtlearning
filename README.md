@@ -27,4 +27,44 @@ Jenkins-isuse to automate various jobs.
 Redhat8-use as a base OS for running the services like httpd,ngrok,jenkins.
 Docker- to run containner image in python model.
 
+Creating a dockerfile :
 
+In RHEL8 fisrt make a directory that will store all the data or the program for our machine learning model.
+
+    mkdir Code
+
+Now the jenkins will automatically copy the files in this folder.
+Download a centos:7 image in docker using:
+
+docker pull centos:7
+docker run -it --name os centos:7
+
+Now install al the requirements for the Machine learning model.
+After the requirements are fulfilled use commit command to make your own image and we will use this image in our Dockerfile.
+
+  docker commit os myimage:v2
+
+Now type:
+
+ vim Dockerfile
+
+And write the following code:
+
+FROM: myimage:v2
+RUN mkdir /root/my_model
+VOLUME /root/my_model
+COPY ./Code/. ./root/my_model/
+WORKDIR /root/my_model
+CMD ["python3","code_file2.py"]
+
+Save this docker file and now build two different images for different environments:
+
+ docker build -t deep:v1 /root
+ docker build -t neural_net:v1 /root
+
+Create job1
+Job1 : Pull  the Github repo automatically when some developers push repo to Github.
+job1 Congiguration
+
+Creating Job2
+By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code  and start training( eg. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the cnn processing).
