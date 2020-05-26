@@ -66,10 +66,21 @@ Create job1
 Job1 : Pull  the Github repo automatically when some developers push repo to Github.
 job1 Congiguration
 
-Creating Job2
+Create job1-
+ Job1 : Pull the Github repo automatically when some developers push repo to Github. job1 Congiguration.
+
+1)Enter a Job Name, select “Freestyle project” and hit “OK” button.
+
+2)Source Code Management: The section contents the source code options select GIT.
+
+3)Build Triggers: The section contents trigger settings that trigger the build based on the specific condition match.
+
+4)Build: The section contents the build steps that can be performed by adding Batch or shell command.
+
+5) Post-build Actions: The section contents the build steps that can be performed after the build action done.
 By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code  and start training( eg. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the cnn processing).
 
-onfigure Email notification in jenkins :
+Configure Email notification in jenkins :
 
 Click the ‘Manage Jenkins’ menu option displayed at the right side of the screen. You will be redirected to the ‘Manage Jenkins’ page, where you need to select the ‘Manage Plugin’ option.
 Click the ‘Available’ tab present at the top of the ‘Manage Plugin’ page.
