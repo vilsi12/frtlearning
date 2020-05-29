@@ -1,5 +1,7 @@
 # MLOps Task-3
 
+What is MLOps?
+ML and DevOps when together used forms a powerful combination which is called MLOps.
 
 Task description
 
@@ -79,14 +81,21 @@ Create job1-
 
 5) Post-build Actions: The section contents the build steps that can be performed after the build action done.
 By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code  and start training( eg. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the cnn processing).
+Creating job 2-
+Job2 : By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code and start training( eg. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the cnn processing).Run docker container from docker image-
 
 Configure Email notification in jenkins :
 
 Click the ‘Manage Jenkins’ menu option displayed at the right side of the screen. You will be redirected to the ‘Manage Jenkins’ page, where you need to select the ‘Manage Plugin’ option.
-Click the ‘Available’ tab present at the top of the ‘Manage Plugin’ page.
-Start typing ‘Notification’ in the ‘Filter’ field displayed at the top-right side of the ‘Manage Plugin’ page. Click the checkbox next to the ‘Email-ext plugin’ option. Click the ‘Install without restart’ button.
+
+Click the ‘Available’ tab then Manage Plugin page.
+
+Start typing ‘Notification’ in the ‘Filter’ as ‘Manage Plugin’ page. Click the checkbox next to the ‘Email-ext plugin’ option. Click the ‘Install without restart’ button.
+
 Now, click the checkbox next to the ‘Email-ext Template Plugin’ option. Click the ‘Install without restart’ button.
+
 Go to the Jenkins home page and click the ‘Manage Jenkins’ menu option. Then, select the ‘Configure System’ option.
+
 Enter the SMTP server name under ‘Email Notification’. Click the ‘Advanced’ button and then click the checkbox next to the ‘Use SMTP Authentication’ option. Now, set the following fields.
 
 SMTP server name : smtp.gmail.com
@@ -97,8 +106,15 @@ SMTP Port: 456
 
 
 Creating Job3 in jenkins
+JOB3 has a task to copy the [show_output.html] file from Parent Directory to /var/www/html which is the default directory for webpages in Apache Webserver.
 
 
+Creating Job 4-
+Job4 : Train your model and predict accuracy or metrics.
+if metrics accuracy is less than 80% , then tweak the machine learning model architecture.
 
-Add another job in Jenkins and name it.
-Go to build triggers and click on 'Build after other projects are built' and give the name of your previous job.
+Creating JOB5 in Jenkins-
+After getting the desired accuracy it will run. This job will run model_success_mail.py and send the notification of project completion to developer.
+
+For more content refer to my blog on Linkedin.
+Thank you for reading.
